@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <usb-device class="255" subclass="66" protocol="1" />
+    <usb-device vendor-id="0006" product-id="0001" />
+    <usb-device vendor-id="0006" product-id="0002" />
+    <usb-device vendor-id="0006" product-id="0003" />
+    <usb-device vendor-id="0006" product-id="0004" />
+    <usb-device vendor-id="0006" product-id="0005" />
+    <usb-device vendor-id="0006" product-id="0006" />
+    <usb-device vendor-id="0006" product-id="0007" />
+</resources>
