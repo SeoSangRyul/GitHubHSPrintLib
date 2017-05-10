@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.SeoSangRyul'
 
 android {
     compileSdkVersion 25
@@ -17,6 +19,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
