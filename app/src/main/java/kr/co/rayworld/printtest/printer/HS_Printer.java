@@ -198,8 +198,9 @@ public class HS_Printer {
         int strPort = mPort;//9100;
         @Override
         protected String doInBackground(String... strings) {
+            Socket socket = null;
             try {
-                Socket socket = new Socket(serverAddr, strPort);
+                socket = new Socket(serverAddr, strPort);
                 OutputStream out = socket.getOutputStream();
 
                 if(strings[0]!=null) {
@@ -229,9 +230,19 @@ public class HS_Printer {
 
 
 
+
+
             } catch (IOException e) {
                 e.printStackTrace();
+            } finally {
+                try {
+                    if(socket!=null)
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+
             return "";
 
         }
