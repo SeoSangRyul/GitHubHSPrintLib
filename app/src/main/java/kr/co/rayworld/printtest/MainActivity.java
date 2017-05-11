@@ -63,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
         //new TCP_send().execute("   Gilgamesh : Dual Wield\n   Trans Tina, Orlando\n");
         //new TCP_send2().execute("   Gilgamesh : Dual Wield\n   아나 속 안좋네\n");
         HS_Printer hp = new HS_Printer(this,HS_Printer.NETWORK_MODE,"192.168.0.253",9100);
-        hp.printString("   Gilgamesh : Dual Wield\n   아나 속 안좋네\n");
+        //hp.printString("   Gilgamesh : Dual Wield\n   아나 속 안좋네\n");
+        Bitmap bm = BitmapFactory.decodeResource(this.getResources(),R.drawable.comm_logo);
+        hp.printBitmap(bm);
     }
 
     private void init() {
