@@ -222,6 +222,9 @@ public class HS_Printer {
                 socket = new Socket(serverAddr, strPort);
                 OutputStream out = socket.getOutputStream();
                 writeImage(out,bitmaps[0]);
+                if(bitmaps[0] != null){
+                    bitmaps[0].recycle();
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
@@ -380,7 +383,7 @@ public class HS_Printer {
 
                     // last dot each line
                     if( ( i % bmWidth) == (bmWidth-1) ){
-                        if(rest == 1) {		// if none multiple of 8, last byte
+                        if(rest == 1) {		// if none multiple of 8, last bytean
                             mIntBuf[j] =  bitToByte;
                             bitToByte = 0;
                             bit_p = 0;
